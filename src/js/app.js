@@ -1,31 +1,45 @@
-// import CSS. Webpack with deal with it
-import "../css/style.css"
+App = {
+  web3Provider: null,
+  contracts: {},
 
-// Import libraries we need.
-import { default as Web3} from "web3"
-import { default as contract } from "truffle-contract"
+  init: function(){
 
+  }
 
-window.App = {
-  // called when web3 is set up
-  start: function() { 
-  },
+  initWeb3: function(){
+    // Is there an injected web3 instance?
+    if (typeof web3 !== "undefined") {
+      App.web3Provider = web3.currentProvider;
+    } else {
+      // If no injected web3 instance is detected, fall back to Ganache
+      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+    }
+    web3 = new Web3(App.web3Provider);
+    return App.initContract();
+  }
+
+  initContract: function(){
+
+  }
+
+  bindEvents: function(){
+
+  }
+
+  markProcured: function(){
+
+  }
+
+  handleProcure: function(){
+
+  }
+
 
 }
 
 
-// When the page loads, we create a web3 instance and set a provider. We then set up the app
-window.addEventListener("load", function() {
-  // Is there an injected web3 instance?
-  if (typeof web3 !== "undefined") {
-    console.warn("Using web3 detected from external source like Metamask")
-    // If there is a web3 instance(in Mist/Metamask), then we use its provider to create our web3object
-    window.web3 = new Web3(web3.currentProvider)
-  } else {
-    console.warn("No web3 detected. Falling back to http://localhost:9545. You should remove this fallback when you deploy live, as it's inherently insecure. Consider switching to Metamask for deployment. More info here: http://truffleframework.com/tutorials/truffle-and-metamask")
-    // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-    window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:9545"))
-  }
-  // initializing the App
-  window.App.start()
-})
+$(function(){
+  $(window).load(function(){
+    App.init();
+  });
+});

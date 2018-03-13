@@ -6,6 +6,7 @@ Want a sticker? Me Too
 - [Truffle](https://github.com/trufflesuite/truffle)
 - [Ganache](http://truffleframework.com/ganache/)
 - [Solidity](http://solidity.readthedocs.io/en/develop/index.html)
+- [web3.js](https://github.com/ethereum/web3.js/)
 
 ### Not using but grateful for:
 + https://github.com/tko22/truffle-webpack-boilerplate.git
