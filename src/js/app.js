@@ -3,7 +3,21 @@ App = {
   contracts: {},
 
   init: function(){
+    // lost stickers
+    $.getJSON('../stickers.json', function(data){
+      var stickerRow = $('#stickerRow');
+      var stickerTemplate = $('#stickerTemplate');
 
+      // create fragment and append to html
+      for(let sticker of data){
+        stickerTemplate.find('.title').text(sticker.name);
+        stickerTemplate.find('img').attr(sticker.picture);
+        stickerTemplate.find('.specialty').text(sticker.specialty);
+        stickerRow.append(stickerTemplate.html());
+      }
+    });
+
+    return App.initWeb3();
   }
 
   initWeb3: function(){
@@ -19,6 +33,15 @@ App = {
   }
 
   initContract: function(){
+    // instantiate artifact file with truffle-contract 
+    // set provider of contract
+    // use contract to mark procured stickers
+    $.getJSON('Procurement.json', function(data){
+      var ProcurementArtifact = data;
+      App.contracts.Procurement = TruffleContract(ProcurementArtifact);
+      App.contracts.Procurement.setProvider(App.web3Provider);
+      return App.markProcured();
+    });
     return App.bindEvents();
   }
 
