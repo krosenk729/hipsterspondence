@@ -50,7 +50,24 @@ App = {
   }
 
   markProcured: function(stickees, account){
-
+    var procurementInstance;
+    App.contracts.Procurement.deployed()
+    .then(function(instance){
+      procurementInstance = instance;
+      return procurementInstance.getStickees.call();
+    })
+    .then(function(stickees){
+      for(i = 0 ; i < stickees.length; i++){
+        // check to see if address is stored for sticker
+        // sync UI to reflect where sticker is procured 
+        if(stickees[i] !== '0x0000000000000000000000000000000000000000'){
+          $('.panel-sticker').eq(i).find('button').text('Sticked Already').attr('disabled', true);
+        }
+      }
+    })
+    .catch(function(err){
+      console.log('error with marking stickers procured', err.message);
+    });
   }
 
   handleProcure: function(event){
