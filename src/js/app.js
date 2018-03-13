@@ -19,19 +19,20 @@ App = {
   }
 
   initContract: function(){
-
+    return App.bindEvents();
   }
 
   bindEvents: function(){
+    $(document).on('click', '.btn-procure', App.handleProcure);
+  }
+
+  markProcured: function(stickees, account){
 
   }
 
-  markProcured: function(){
-
-  }
-
-  handleProcure: function(){
-
+  handleProcure: function(event){
+    event.preventDefault();
+    var stickerId = parseInt($(event.target).data('id'));
   }
 
 

@@ -1,0 +1,56 @@
+[
+	{
+		"id": 0,
+		"name": "Travis",
+		"picture": "images/sticker-travis.jpg",
+		"specialty": "continuous-integration"
+	},
+	{
+		"id": 1,
+		"name": "Sass",
+		"picture": "images/sticker-sass.jpg",
+		"specialty": "front-end"
+	},
+	{
+		"id": 2,
+		"name": "Rust",
+		"picture": "images/sticker-rust.jpg",
+		"specialty": "coolness"
+	},
+	{
+		"id": 3,
+		"name": "Refill",
+		"picture": "images/sticker-refill.jpg",
+		"specialty": "hipster"
+	},
+	{
+		"id": 4,
+		"name": "Neat",
+		"picture": "images/sticker-neat.jpg",
+		"specialty": "hipster"
+	},
+	{
+		"id": 5,
+		"name": "Modernizr",
+		"picture": "images/sticker-modernizr.jpg",
+		"specialty": "front-end"
+	},
+	{
+		"id": 6,
+		"name": "jQuery",
+		"picture": "images/sticker-jquery.jpg",
+		"specialty": "front-end"
+	},
+	{
+		"id": 7,
+		"name": "Grunt",
+		"picture": "images/sticker-grunt.jpg",
+		"specialty": "packaging"
+	},
+	{
+		"id": 8,
+		"name": "Ember",
+		"picture": "images/sticker-ember.jpg",
+		"specialty": "front-end"
+	}
+]
