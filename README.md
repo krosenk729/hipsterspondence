@@ -1,5 +1,5 @@
-# Boilerplate with Truffle and webpack for dApps built on Ethereum
-
+# Truffle & Webpack dApps Built on Ethereum
+Want a sticker? Me Too
 
 ### Dependencies:
 - [Nodejs 5.0+](https://nodejs.org/en/)
@@ -8,14 +8,16 @@
 
 + https://github.com/tko22/truffle-webpack-boilerplate.git
 + http://solidity.readthedocs.io/en/develop/index.html
++ https://ethereum.stackexchange.com/questions/2327/clarification-of-256-bit-word-semantics
++ https://hackernoon.com/ethereum-development-walkthrough-part-2-truffle-ganache-geth-and-mist-8d6320e12269
+
 
 ## Setup
 ```
 npm install -g truffle
-git clone https://github.com/tko22/truffle-webpack-boilerplate.git
-cd truffle-webpack-boilerplate
-npm install
-npm run dev
+truffle develop
+truffle compile
+truffle migrate
 ```
 
 ## OOh
