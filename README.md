@@ -1,7 +1,7 @@
 # Truffle & Webpack dApps Built on Ethereum
 Want a sticker? Me Too
 
-### Dependencies:
+### Using:
 - [Nodejs 5.0+](https://nodejs.org/en/)
 - [Truffle](https://github.com/trufflesuite/truffle)
 - [Ganache](http://truffleframework.com/ganache/)

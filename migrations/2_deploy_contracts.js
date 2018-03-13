@@ -1,5 +1,5 @@
-var Voting = artifacts.require("Voting")
+var Procure = artifacts.require("Procure")
 
 module.exports = function(deployer) {
-	deployer.deploy(Voting)
+	deployer.deploy(Procure)
 }
