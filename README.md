@@ -26,6 +26,11 @@ truffle compile
 truffle migrate
 ```
 
+To run tests, run
+``` 
+truffle test 
+```
+
 ## OOh So That's How The File Structure Works?
 - contracts/ — Folder holding all of the Contracts
 - migrations/ — Folder holding Migration files, which help you deploy your smart contracts into the Blockchain
